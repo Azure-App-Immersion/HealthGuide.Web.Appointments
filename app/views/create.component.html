@@ -1,0 +1,110 @@
+<h1 class="display-4">
+    Create An Appointment
+</h1>
+<hr />
+<h4 class="text-muted" [hidden]="!IsLoading">
+    <i class="fa fa-spinner fa-animate" aria-hidden="true"></i>
+    Loading <strong>Doctors</strong> and <strong>Locations</strong>...
+</h4>
+<form class="p-md-x-5" (ngSubmit)="onFormSubmit()" #createForm="ngForm" [hidden]="IsLoading">
+  <fieldset class="img-thumbnail p-3 my-2 mx-3">
+    <div class="form-group row">
+      <label for="firstName" class="col-sm-2 col-form-label">
+        First Name
+      </label>
+      <div class="col-sm-10">
+        <input name="firstName" class="form-control" type="text" [(ngModel)]="Appointment.Patient.FirstName" required="required">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="lastName" class="col-sm-2 col-form-label">
+        Last Name
+      </label>
+      <div class="col-sm-10">
+        <input name="lastName" class="form-control" type="text" [(ngModel)]="Appointment.Patient.LastName" required="required">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="emailAddress" class="col-sm-2 col-form-label">
+        Email Address
+      </label>
+      <div class="col-sm-10">
+        <input name="emailAddress" class="form-control" type="email" [(ngModel)]="Appointment.Patient.EmailAddress" required="required">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="phoneNumber" class="col-sm-2 col-form-label">
+        Phone Number
+      </label>
+      <div class="col-sm-10">
+        <input name="phoneNumber" class="form-control" type="tel" [(ngModel)]="Appointment.Patient.PhoneNumber" required="required">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="img-thumbnail p-3 my-2 mx-3">
+    <div class="form-group row">
+      <label for="doctor" class="col-sm-2 col-form-label">
+        Doctor
+      </label>
+      <div class="col-sm-10">
+        <select name="doctor" class="form-control" [(ngModel)]="Appointment.Doctor" required="required">
+          <option *ngFor="let doc of Doctors" [ngValue]="doc">
+            {{doc.Name}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="location" class="col-sm-2 col-form-label">
+        Location
+      </label>
+      <div class="col-sm-10">
+        <select name="location" class="form-control" [(ngModel)]="Appointment.Location" required="required">
+          <option *ngFor="let loc of Locations" [ngValue]="loc">
+            {{loc.Name}}
+          </option>
+        </select>
+      </div>
+    </div>  
+  </fieldset>
+  <fieldset class="img-thumbnail p-3 my-2 mx-3">
+    <div class="form-group row">
+      <label for="reason" class="col-sm-2 col-form-label">
+        Reason for Visit
+      </label>
+      <div class="col-sm-10">
+        <textarea name="reason" class="form-control" rows="4" [(ngModel)]="Appointment.Visit.Reason" required="required"></textarea>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="img-thumbnail p-3 my-2 mx-3">
+    <div class="form-group row">
+      <label for="date" class="col-sm-2 col-form-label">
+        Requested Date
+      </label>
+      <div class="col-sm-10">
+        <input name="date" class="form-control" type="date" [(ngModel)]="RequestedDate" (ngModelChange)="updateSlots($event)" required="required">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="slot" class="col-sm-2 col-form-label">
+        Appointment Slot
+      </label>
+      <div class="col-sm-10">
+        <select name="slot" class="form-control" [(ngModel)]="Appointment.Slot" [hidden]="!SlotsReady" required="required">
+          <option *ngFor="let slot of AvailableSlots" [value]="slot">
+            {{slot | date:'shortTime' }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </fieldset>
+  <div class="d-flex justify-content-end pt-4">
+    <button type="reset" class="btn btn-danger mx-2">
+      Clear Form
+    </button>
+    <button type="submit" class="btn btn-primary mx-2" [disabled]="!createForm.form.valid">
+      Create Appointment
+    </button>
+  </div>
+</form>

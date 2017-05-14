@@ -1,0 +1,29 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <aside class="col-xl-2 col-lg-3 p-3 img-thumbnail">
+            <navigation></navigation>
+        </aside>
+        <main class="col-xl-10 col-lg-9 px-0 bg-faded">
+            <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <span class="navbar-brand">
+                    Appointment Dashboard
+                </span>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="form-inline ml-auto">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search Query" required="required" [(ngModel)]="SearchQuery" />
+                        <button class="btn btn-primary my-2 my-sm-0" (click)="navigateSearch()">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            Search
+                        </button> 
+                    </div>
+                </div>
+            </nav>
+            <article class="py-3 px-4">
+                <router-outlet></router-outlet>
+            </article>
+        </main>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+html,body{
+    height: 100vh;
+}
+body {
+    font-family: "Ubuntu", apple-system, system-ui, BlinkMacSystemFont,"Segoe UI", Roboto,"Helvetica Neue", Arial, sans-serif;
+    color: #333333;
+}
+a {
+    color: #666666;
+    text-decoration: none;
+}
+.fa-animate {
+    animation-name: spin;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
