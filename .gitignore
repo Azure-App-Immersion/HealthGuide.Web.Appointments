@@ -45,4 +45,4 @@ jspm_packages
 
 # Ignore TypeScript Output
 app/**/*.js
-app/**/*.js.map 
+app/**/*.js.map
