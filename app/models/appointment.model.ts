@@ -10,7 +10,9 @@ export class Appointment {
         this.Doctor = new Doctor();
         this.Location = new Location();
         this.CheckedIn = false;
+        this.Completed = false;
     }
+    public Id : string;
     public Patient : Patient;
     public Doctor : Doctor;
     public Visit : Visit;

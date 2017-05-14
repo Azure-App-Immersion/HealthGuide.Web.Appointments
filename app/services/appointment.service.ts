@@ -1,22 +1,19 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 import { Appointment } from '../models/appointment.model';
+import { Settings } from '../utilities/settings.constant';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AppointmentService {
+    constructor(private _http : Http) {}
     public async CreateAppointment(appointment : Appointment) : Promise<Appointment> {
-        return null;
+        let response = await this._http.post(Settings.APPOINTMENTS_API_ENDPOINT, appointment).toPromise();
+        return response.json();
     }
     public async GetAppointmentSlots(requestedDate : Date) : Promise<Date[]> {
-        return [
-            new Date('2017-05-13T09:00:00'),
-            new Date('2017-05-13T09:15:00'),
-            new Date('2017-05-13T09:30:00'),
-            new Date('2017-05-13T09:45:00'),
-            new Date('2017-05-13T10:00:00'),
-            new Date('2017-05-13T10:15:00'),
-            new Date('2017-05-13T10:30:00'),
-            new Date('2017-05-13T10:45:00'),
-            new Date('2017-05-13T11:00:00'),
-        ];
+        console.log(requestedDate);
+        let response = await this._http.get(Settings.SLOTS_API_ENDPOINT + '/' + new Date(requestedDate).toISOString()).toPromise();
+        return response.json();
     }
 }

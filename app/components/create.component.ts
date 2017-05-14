@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Doctor } from '../models/doctor.model';
 import { Location } from '../models/location.model';
 import { Appointment } from '../models/appointment.model';
@@ -17,7 +18,7 @@ export class CreateComponent implements OnInit {
   public Doctors : Doctor[] = [];
   public Locations : Location[] = [];
   public Appointment : Appointment = new Appointment();
-  constructor (private _doctorService : DoctorService, private _locationService : LocationService, private _appointmentService : AppointmentService) {}
+  constructor (private _router : Router, private _doctorService : DoctorService, private _locationService : LocationService, private _appointmentService : AppointmentService) {}
   public async ngOnInit() {
     await new Promise(resolve => setTimeout(resolve, 1500));
     this.Doctors = await this._doctorService.GetDoctors();
@@ -34,6 +35,7 @@ export class CreateComponent implements OnInit {
     }
   }
   public async onFormSubmit() {
-    await this._appointmentService.CreateAppointment(this.Appointment);
+    this.Appointment = await this._appointmentService.CreateAppointment(this.Appointment);
+    this._router.navigate(['/search/' + this.Appointment.Id]);
   }
 }
