@@ -1,5 +1,5 @@
 export class Visit {
-    public Reason : string;
-    public Prescription : string;
-    public Notes : string;
+    public reason : string;
+    public prescription : string;
+    public notes : string;
 }

@@ -1,4 +1,4 @@
 export class Location {
-    public Id : string;
-    public Name : string;
+    public id : string;
+    public name : string;
 }

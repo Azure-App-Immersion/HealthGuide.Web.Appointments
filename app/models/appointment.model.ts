@@ -5,19 +5,19 @@ import { Location } from './location.model';
 
 export class Appointment {
     constructor () {
-        this.Patient = new Patient();
-        this.Visit = new Visit();
-        this.Doctor = new Doctor();
-        this.Location = new Location();
-        this.CheckedIn = false;
-        this.Completed = false;
+        this.patient = new Patient();
+        this.visit = new Visit();
+        this.doctor = new Doctor();
+        this.location = new Location();
+        this.checkedIn = false;
+        this.completed = false;
     }
-    public Id : string;
-    public Patient : Patient;
-    public Doctor : Doctor;
-    public Visit : Visit;
-    public Slot : Date;
-    public Location : Location;
-    public CheckedIn : boolean;
-    public Completed : boolean;
+    public id : string;
+    public patient : Patient;
+    public doctor : Doctor;
+    public visit : Visit;
+    public slot : Date;
+    public location : Location;
+    public checkedIn : boolean;
+    public completed : boolean;
 }

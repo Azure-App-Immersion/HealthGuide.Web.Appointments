@@ -12,30 +12,29 @@ import { AppointmentService } from '../services/appointment.service';
   templateUrl: 'app/views/create.component.html'
 })
 export class CreateComponent implements OnInit {
-  public IsLoading : boolean = true;
-  public SlotsReady : boolean = false;
-  public AvailableSlots : Date[] = [];
-  public Doctors : Doctor[] = [];
-  public Locations : Location[] = [];
-  public Appointment : Appointment = new Appointment();
+  public isLoading : boolean = true;
+  public slotsReady : boolean = false;
+  public availableSlots : Date[] = [];
+  public doctors : Doctor[] = [];
+  public locations : Location[] = [];
+  public appointment : Appointment = new Appointment();
   constructor (private _router : Router, private _doctorService : DoctorService, private _locationService : LocationService, private _appointmentService : AppointmentService) {}
   public async ngOnInit() {
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    this.Doctors = await this._doctorService.GetDoctors();
-    this.Locations = await this._locationService.GetLocations();
-    this.IsLoading = false;
+    this.doctors = await this._doctorService.GetDoctors();
+    this.locations = await this._locationService.GetLocations();
+    this.isLoading = false;
   }
   public async updateSlots(requestedDate : Date) {
     if (requestedDate) {
-      this.SlotsReady = true;
-      this.AvailableSlots = await this._appointmentService.GetAppointmentSlots(requestedDate);
+      this.slotsReady = true;
+      this.availableSlots = await this._appointmentService.GetAppointmentSlots(requestedDate);
     }
     else {
-      this.SlotsReady = false;
+      this.slotsReady = false;
     }
   }
   public async onFormSubmit() {
-    this.Appointment = await this._appointmentService.CreateAppointment(this.Appointment);
-    this._router.navigate(['/search/' + this.Appointment.Id]);
+    this.appointment = await this._appointmentService.CreateAppointment(this.appointment);
+    this._router.navigate(['/search/' + this.appointment.id]);
   }
 }

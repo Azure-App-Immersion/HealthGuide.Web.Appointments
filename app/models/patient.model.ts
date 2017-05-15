@@ -1,6 +1,6 @@
 export class Patient {
-    public FirstName : string;
-    public LastName : string;
-    public EmailAddress : string;
-    public PhoneNumber : string;
+    public firstName : string;
+    public lastName : string;
+    public emailAddress : string;
+    public phoneNumber : string;
 }
