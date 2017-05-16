@@ -1,0 +1,54 @@
+<h1 class="display-4">
+    Today's Appointments
+</h1>
+<hr />
+<table class="table table-striped" *ngIf="results.length > 0">
+    <thead class="thead-inverse">
+        <tr>
+            <th>
+                Date
+            </th>
+            <th>
+                Time
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Email Address
+            </th>
+            <th>
+                Phone Number
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let result of results">
+            <th scope="row">
+                {{result.slot | date:'MMM d'}}
+            </th>
+            <th scope="row">
+                {{result.slot | date:'hh:mm a'}}
+            </th>
+            <td>
+                {{result.patient.firstName}}
+            </td>
+            <td>
+                {{result.patient.lastName}}
+            </td>
+            <td>
+                <a href="mailto:{{result.emailAddress}}">
+                    {{result.patient.emailAddress}}
+                </a>
+            </td>
+            <td>
+                <a href="tel:{{result.phoneNumber}}">
+                    {{result.patient.phoneNumber}}
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

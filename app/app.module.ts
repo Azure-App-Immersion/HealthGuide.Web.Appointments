@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { ShellComponent } from './components/shell.component';
 import { NavigationComponent } from './components/navigation.component';
 import { HomeComponent } from './components/home.component';
-import { SearchComponent } from './components/search.component';
+import { TodayComponent } from './components/today.component';
 import { CreateComponent } from './components/create.component';
 import { DoctorService } from './services/doctor.service';
 import { PatientService } from './services/patient.service';
@@ -28,12 +28,8 @@ import { AppointmentService } from './services/appointment.service';
                 component: CreateComponent
             },
             {
-                path: 'search/:query',
-                component: SearchComponent
-            },
-            {
-                path: 'search',
-                component: SearchComponent
+                path: 'today',
+                component: TodayComponent
             }
         ])
     ],
@@ -41,7 +37,7 @@ import { AppointmentService } from './services/appointment.service';
         ShellComponent,
         HomeComponent,
         NavigationComponent,
-        SearchComponent,
+        TodayComponent,
         CreateComponent
     ],
     providers: [

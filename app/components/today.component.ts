@@ -5,10 +5,10 @@ import { Appointment } from '../models/appointment.model';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
-  selector: 'search',
-  templateUrl: 'app/views/search.component.html'
+  selector: 'today',
+  templateUrl: 'app/views/today.component.html'
 })
-export class SearchComponent implements OnInit {
+export class TodayComponent implements OnInit {
   public results : Appointment[] = [];
   public query : string;
   constructor (private _route: ActivatedRoute, private _appointmentService : AppointmentService) {}

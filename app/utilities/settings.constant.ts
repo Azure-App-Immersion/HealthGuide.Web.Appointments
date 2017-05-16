@@ -3,7 +3,6 @@ export class Settings {
     public static LOCATIONS_API_ENDPOINT : string = '';
     public static APPOINTMENTS_API_ENDPOINT : string = '';
     public static SLOTS_API_ENDPOINT : string = '';
-    public static PATIENTS_API_ENDPOINT : string = '';
     public static SEARCH_API_ENDPOINT : string = '';
-    public static SEARCH_API_KEY : string = '';
+    public static PATIENTS_API_ENDPOINT : string = '';
 }
