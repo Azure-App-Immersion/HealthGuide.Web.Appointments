@@ -1,7 +1,6 @@
 {
   "name": "angular-app",
   "version": "1.0.0",
-  "main": "server.js",
   "dependencies": {
     "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",
@@ -23,11 +22,7 @@
     "zone.js": "^0.6.25"
   },
   "devDependencies": {
-    "@types/angular": "^1.6.9",
-    "@types/core-js": "^0.9.37",
-    "@types/node": "^6.0.65",
     "concurrently": "^3.0.0",
-    "lite-server": "^2.2.2",
-    "typescript": "^2.2.1"
+    "lite-server": "^2.2.2"
   }
 }
