@@ -107,4 +107,3 @@ TodayComponent = __decorate([
     __metadata("design:paramtypes", [router_1.ActivatedRoute, appointment_service_1.AppointmentService])
 ], TodayComponent);
 exports.TodayComponent = TodayComponent;
-//# sourceMappingURL=today.component.js.map

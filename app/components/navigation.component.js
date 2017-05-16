@@ -19,4 +19,3 @@ NavigationComponent = __decorate([
     })
 ], NavigationComponent);
 exports.NavigationComponent = NavigationComponent;
-//# sourceMappingURL=navigation.component.js.map

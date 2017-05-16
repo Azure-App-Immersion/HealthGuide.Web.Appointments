@@ -12,4 +12,3 @@ Settings.SLOTS_API_ENDPOINT = '';
 Settings.SEARCH_API_ENDPOINT = '';
 Settings.PATIENTS_API_ENDPOINT = '';
 exports.Settings = Settings;
-//# sourceMappingURL=settings.constant.js.map

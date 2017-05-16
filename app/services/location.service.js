@@ -72,4 +72,3 @@ LocationService = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], LocationService);
 exports.LocationService = LocationService;
-//# sourceMappingURL=location.service.js.map

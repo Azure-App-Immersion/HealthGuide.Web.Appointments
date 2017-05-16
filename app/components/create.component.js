@@ -130,4 +130,3 @@ CreateComponent = __decorate([
     __metadata("design:paramtypes", [router_1.Router, doctor_service_1.DoctorService, location_service_1.LocationService, appointment_service_1.AppointmentService])
 ], CreateComponent);
 exports.CreateComponent = CreateComponent;
-//# sourceMappingURL=create.component.js.map

@@ -6,4 +6,3 @@ var Visit = (function () {
     return Visit;
 }());
 exports.Visit = Visit;
-//# sourceMappingURL=visit.model.js.map

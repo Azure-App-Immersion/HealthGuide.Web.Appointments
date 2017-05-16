@@ -16,4 +16,3 @@ var Appointment = (function () {
     return Appointment;
 }());
 exports.Appointment = Appointment;
-//# sourceMappingURL=appointment.model.js.map

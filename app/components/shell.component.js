@@ -19,4 +19,3 @@ ShellComponent = __decorate([
     })
 ], ShellComponent);
 exports.ShellComponent = ShellComponent;
-//# sourceMappingURL=shell.component.js.map

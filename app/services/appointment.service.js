@@ -117,4 +117,3 @@ AppointmentService = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], AppointmentService);
 exports.AppointmentService = AppointmentService;
-//# sourceMappingURL=appointment.service.js.map

@@ -6,4 +6,3 @@ var Location = (function () {
     return Location;
 }());
 exports.Location = Location;
-//# sourceMappingURL=location.model.js.map

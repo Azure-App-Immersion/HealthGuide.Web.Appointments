@@ -16,4 +16,3 @@ PatientService = __decorate([
     core_1.Injectable()
 ], PatientService);
 exports.PatientService = PatientService;
-//# sourceMappingURL=patient.service.js.map

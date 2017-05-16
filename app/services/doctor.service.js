@@ -72,4 +72,3 @@ DoctorService = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], DoctorService);
 exports.DoctorService = DoctorService;
-//# sourceMappingURL=doctor.service.js.map

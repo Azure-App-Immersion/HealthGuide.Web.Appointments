@@ -6,4 +6,3 @@ var Doctor = (function () {
     return Doctor;
 }());
 exports.Doctor = Doctor;
-//# sourceMappingURL=doctor.model.js.map

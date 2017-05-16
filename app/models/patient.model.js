@@ -6,4 +6,3 @@ var Patient = (function () {
     return Patient;
 }());
 exports.Patient = Patient;
-//# sourceMappingURL=patient.model.js.map
