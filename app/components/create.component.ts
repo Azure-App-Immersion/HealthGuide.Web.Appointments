@@ -35,6 +35,6 @@ export class CreateComponent implements OnInit {
   }
   public async onFormSubmit() {
     this.appointment = await this._appointmentService.CreateAppointment(this.appointment);
-    this._router.navigate(['/search/' + this.appointment.id]);
+    this._router.navigate(['/']);
   }
 }

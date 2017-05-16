@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { ShellComponent } from './components/shell.component';
 import { NavigationComponent } from './components/navigation.component';
 import { HomeComponent } from './components/home.component';
-import { TodayComponent } from './components/today.component';
 import { SearchComponent } from './components/search.component';
 import { CreateComponent } from './components/create.component';
 import { DoctorService } from './services/doctor.service';
@@ -23,10 +22,6 @@ import { AppointmentService } from './services/appointment.service';
             {
                 path: '',
                 component: HomeComponent
-            },
-            {
-                path: 'today',
-                component: TodayComponent
             },
             {
                 path: 'create',
@@ -46,7 +41,6 @@ import { AppointmentService } from './services/appointment.service';
         ShellComponent,
         HomeComponent,
         NavigationComponent,
-        TodayComponent,
         SearchComponent,
         CreateComponent
     ],
