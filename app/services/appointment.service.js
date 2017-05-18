@@ -57,7 +57,7 @@ var AppointmentService = (function () {
             var response;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this._http.post(settings_constant_1.Settings.APPOINTMENTS_API_ENDPOINT, appointment).toPromise()];
+                    case 0: return [4 /*yield*/, this._http.post(settings_constant_1.Settings.APPOINTMENTS_API_ENDPOINT + '/appointments', appointment).toPromise()];
                     case 1:
                         response = _a.sent();
                         return [2 /*return*/, response.json()];
@@ -71,7 +71,7 @@ var AppointmentService = (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        requestUrl = settings_constant_1.Settings.SLOTS_API_ENDPOINT + '/' + new Date(requestedDate).toISOString();
+                        requestUrl = settings_constant_1.Settings.APPOINTMENTS_API_ENDPOINT + '/slots/' + new Date(requestedDate).toISOString();
                         return [4 /*yield*/, this._http.get(requestUrl).toPromise()];
                     case 1:
                         response = _a.sent();
@@ -86,22 +86,7 @@ var AppointmentService = (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        requestUrl = settings_constant_1.Settings.SEARCH_API_ENDPOINT + new Date().toISOString();
-                        return [4 /*yield*/, this._http.get(requestUrl).toPromise()];
-                    case 1:
-                        response = _a.sent();
-                        return [2 /*return*/, response.json()];
-                }
-            });
-        });
-    };
-    AppointmentService.prototype.GetVisits = function (appointment) {
-        return __awaiter(this, void 0, void 0, function () {
-            var requestUrl, response;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        requestUrl = settings_constant_1.Settings.VISITS_API_ENDPOINT + appointment.id;
+                        requestUrl = settings_constant_1.Settings.APPOINTMENTS_API_ENDPOINT + '/appointments/date/' + new Date().toISOString();
                         return [4 /*yield*/, this._http.get(requestUrl).toPromise()];
                     case 1:
                         response = _a.sent();
