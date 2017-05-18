@@ -5,10 +5,6 @@ var Settings = (function () {
     }
     return Settings;
 }());
-Settings.DOCTORS_API_ENDPOINT = '';
-Settings.LOCATIONS_API_ENDPOINT = '';
+Settings.METADATA_API_ENDPOINT = '';
 Settings.APPOINTMENTS_API_ENDPOINT = '';
-Settings.SLOTS_API_ENDPOINT = '';
-Settings.SEARCH_API_ENDPOINT = '';
-Settings.PATIENTS_API_ENDPOINT = '';
 exports.Settings = Settings;
