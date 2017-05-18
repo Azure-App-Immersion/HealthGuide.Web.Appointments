@@ -55,7 +55,6 @@ AppModule = __decorate([
         ],
         providers: [
             doctor_service_1.DoctorService,
-            patient_service_1.PatientService,
             location_service_1.LocationService,
             appointment_service_1.AppointmentService,
         ],
