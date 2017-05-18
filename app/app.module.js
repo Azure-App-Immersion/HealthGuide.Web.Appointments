@@ -17,7 +17,6 @@ var home_component_1 = require("./components/home.component");
 var today_component_1 = require("./components/today.component");
 var create_component_1 = require("./components/create.component");
 var doctor_service_1 = require("./services/doctor.service");
-var patient_service_1 = require("./services/patient.service");
 var location_service_1 = require("./services/location.service");
 var appointment_service_1 = require("./services/appointment.service");
 var AppModule = (function () {
